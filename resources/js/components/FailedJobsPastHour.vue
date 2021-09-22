@@ -74,7 +74,7 @@
                 Nova.request().get('/horizon/api/stats').then(response => {
                     this.isLoading = false;
                     this.isError = false;
-                    this.stat = response.data.recentlyFailed;
+                    this.stat = response.data.failedJobs;
                     this.status = response.data.status;
                 }).catch(err => {
                     this.isLoading = false;
